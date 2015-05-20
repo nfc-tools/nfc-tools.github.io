@@ -1,0 +1,22 @@
+---
+layout: page
+title: News
+permalink: /news/
+---
+
+<div class="row">
+  {% for post in site.posts %}
+    <div class="col s12 m12 l6">
+      <div class="card">
+        <div class="card-content">
+          <div class="right">{{ post.date | date: "%b %-d, %Y" }}</div>
+          <span class="card-title">{{ post.title }}</span>
+          {{ post.excerpt }}
+        </div>
+        <div class="card-action">
+          <a href="{{ post.url | prepend: site.baseurl }}">Continue reading</a>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>

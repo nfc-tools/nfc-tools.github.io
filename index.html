@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<div class="container">
+  <br />
+  <br />
+  <h1 class="header center"><img class="logo" src="/img/logo.png" /> {{ site.title }}</h1>
+  <div class="row center">
+    <h5 class="header col s12 light">A <em><acronym title="Free Libre Open Source Software">FLOSS</acronym></em>, <em>cross plateform</em>, <em>low level</em> <acronym title="Near Field Communication">NFC</acronym> <acronym title="Software Development Kit">SDK</acronym> and programmers <acronym title="Application Programming Interface">API</acronym>.</h5>
+  </div>
+  <br />
+  <br />
+  <h2 class="center">In the spotlight</h2>
+  <div class="row">
+    {% assign projects = site.projects | sort: 'order', 'last' %}
+    {% for item in projects limit:3 %}
+      <div class="col s4">
+        <div class="card white center">
+          <div class="card-content">
+	    <a href="{{ item.url }}">
+              <h3>{{ item.title }}</h3>
+	    </a>
+	    {% if item.lead %}
+              {{ item.lead | markdownify }}
+	    {% endif %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+    <p class="center">
+      <a href="/projects/">View all projects &gt;</a>
+    </p>
+  </div>
+</div>

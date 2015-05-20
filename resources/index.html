@@ -1,0 +1,51 @@
+---
+title: Documentation
+layout: page
+resources: true
+---
+
+<div class="row">
+  <div class="col m6 s12">
+    <h2>Chips</h2>
+    <ul>
+      {% for item in site.chips %}
+        <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="col m6 s12">
+    <h2>NFC Devices</h2>
+    <ul>
+      {% for item in site.devices %}
+        <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="col m6 s12">
+    <h2>NFC Tags</h2>
+    <ul>
+      {% assign nfc_tags = site.nfc_tags | sort: 'title' %}
+      {% for item in nfc_tags %}
+        <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="col m6 s12">
+    <h2>RFID Tags</h2>
+    <ul>
+      {% assign rfid_tags = site.rfid_tags | sort: 'title' %}
+      {% for item in rfid_tags %}
+        <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="col m6 s12">
+    <h2>Standards</h2>
+    <ul>
+      {% assign standards = site.standards | sort: 'title' %}
+      {% for item in standards %}
+        <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

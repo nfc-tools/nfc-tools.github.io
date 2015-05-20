@@ -1,0 +1,14 @@
+[ ] Des photos pour tout ça
+[/] Du bleu qui est jolie (une charte graphique quoi)
+[/] Des tailles de titres cohérentes
+[/] Icône nfc-tools
+[X] Voir pourquoi le JS chie (font des images 'popup', menu)
+[X] Un truc qui vérifie les liens
+    wget --spider -o wget.log -r -p http://127.0.0.1:4000
+    grep -B2 404 wget.log
+[ ] Faire un mirroir des documentations
+[ ] Adresses de contact vers Opus-Codium
+[X] Liens Github qui marchent ?
+[ ] Projects maturity/stability/production readyness
+[ ] Améliorer / homogénéiser les titres des pages des lecteurs
+[ ] Marquer les liens externes comme tel (JS)

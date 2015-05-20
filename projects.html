@@ -1,0 +1,23 @@
+---
+title: Projects
+permalink: /projects/
+layout: page
+project: true
+---
+
+<table class="striped">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for project in site.projects %}
+      <tr>
+        <td><a href="{{ project.url }}">{{ project.title }}</a></td>
+        <td>{{ project.lead }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>

@@ -1,0 +1,43 @@
+<footer class="page-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col s2">
+        <ul>
+          <li>{{ site.title }}</li>
+          <li><a href="/support/">Support</a></li>
+          <li><a href="/support/debugging/">Debugging</a><li>
+          <li><a href="/support/reporting-bugs/">Reporting Bugs</a><li>
+          <li><a href="/donations/">Donations</a></li>
+          <li><a href="/contact/">Contact us</a></li>
+        </ul>
+      </div>
+      <div class="col s2">
+        <ul>
+          <li>Projects</li>
+          {% for project in site.projects %}
+            <li><a href="{{ project.url }}">{{ project.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="col s4">
+        <ul>
+          <li>External resources</li>
+          <li><a href="https://github.com/nfc-tools/">Github</a><li>
+	  <li><a href="http://opus-codium.fr">NFC Consulting</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      Copyright &copy; 2015, <a href="https://github.com/orgs/nfc-tools/people">{{ site.title }} developers</a> &amp; contributors.
+    </div>
+  </div>
+</footer>
+<script src="/js/jquery-2.1.1.min.js"></script>
+<script src="/js/materialize.min.js"></script>
+<script>
+  $('.button-collapse').sideNav();
+  $('.collapsible').collapsible();
+  $('.materialboxed').materialbox();
+</script>

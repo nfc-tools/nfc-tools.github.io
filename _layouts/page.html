@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<h1 class="page-title">
+  <div class="container">
+    {% if page.longtitle %}
+      {{ page.longtitle }}
+    {% else %}
+      {{ page.title }}
+    {% endif %}
+    {% if page.subtitle %}
+      <small>— {{ page.subtitle }}</small>
+    {% endif %}
+    <a rel="nofollow" class="edit" title="Edit this page on GitHub" href="https://github.com/nfc-tools/nfc-tools.github.io/blob/master/{% if page.collection %}{{ page.relative_path }}{% else %}{{ page.path }}{% endif %}"><i class="mdi-editor-mode-edit"></i></a>
+  </div>
+</h1>
+
+<div class="container">
+  {% if page.lead %}
+    <div class="flow-text">{{ page.lead | markdownify }}</div>
+  {% endif %}
+  {{ content }}
+</div>

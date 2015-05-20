@@ -1,0 +1,86 @@
+# Site settings
+title: nfc-tools
+email: hello@nfc-tools.org
+description: > # this means to ignore newlines until "baseurl:"
+  This website mainly focuses itself on researchers and developers willing to
+  work with NFC hardware but without the pain of programming NFC software on a
+  very low level. Libnfc does not require any license fee or non-disclosure
+  agreement to be signed for. We hope to move NFC development to a more open
+  culture where discussions about applications and techniques can be shared
+  among the users.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://nfc-tools.org" # the base hostname & protocol for your site
+permalink: /blog/:year/:month/:day/:title/
+
+# Build settings
+markdown: kramdown
+exclude:
+  - Makefile
+  - README.md
+collections:
+  chips:
+    output: true
+    permalink: /resources/chips/:path/
+  devices:
+    output: true
+    permalink: /resources/devices/:path/
+  projects:
+    output: true
+    permalink: /projects/:path/
+  nfc_tags:
+    output: true
+    permalink: /resources/nfc-tags/:path/
+  rfid_tags:
+    output: true
+    permalink: /resources/rfid-tags/:path/
+  standards:
+    output: true
+    permalink: /resources/standards/:path/
+defaults:
+  - scope:
+      path: ''
+      type: chips
+    values:
+      resources: true
+      chip: true
+      layout: page
+  - scope:
+      path: ''
+      type: devices
+    values:
+      resources: true
+      device: true
+      layout: page
+  - scope:
+      path: ''
+      type: projects
+    values:
+      project: true
+      layout: project
+  - scope:
+      path: ''
+      type: nfc_tags
+    values:
+      resources: true
+      nfc_tag: true
+      layout: page
+  - scope:
+      path: ''
+      type: rfid_tags
+    values:
+      resources: true
+      rfid_tag: true
+      layout: page
+  - scope:
+      path: ''
+      type: standards
+    values:
+      resources: true
+      standard: true
+      layout: page
+
+# Github defaults (overridable)
+highlighter: pygments
+# Github defaults (not overridable)
+safe: true
+lsi: false

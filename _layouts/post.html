@@ -1,0 +1,17 @@
+---
+layout: default
+news: true
+---
+<h1 class="page-title">
+  <div class="container">
+    {{ page.title }}
+    {% if page.subtitle %}
+      <small>— {{ page.subtitle }}</small>
+    {% endif %}
+  </div>
+</h1>
+
+<div class="container">
+  <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+  {{ content }}
+</div>

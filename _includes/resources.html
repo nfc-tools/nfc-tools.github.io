@@ -1,0 +1,80 @@
+<nav id="slide-out" class="side-nav fixed">
+  <ul>
+    <!--
+    <li class="center logo"><img src="/img/logo.png" alt="" /></li>
+    -->
+    <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+        <li>
+          <a class="collapsible-header{% if page.chip %} active{% endif %}">Chips<i class="mdi-navigation-arrow-drop-down"></i></a>
+          <div class="collapsible-body">
+            <ul>
+              {% for item in site.chips %}
+                <li{% if page.url == item.url %} class="active"{% endif %}><a href="{{ item.url }}">{{ item.title }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+        <li>
+          <a class="collapsible-header{% if page.device %} active{% endif %}">NFC Devices<i class="mdi-navigation-arrow-drop-down"></i></a>
+          <div class="collapsible-body">
+            <ul>
+              {% for item in site.devices %}
+                <li{% if page.url == item.url %} class="active"{% endif %}><a href="{{ item.url }}">{{ item.title }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+        <li>
+          <a class="collapsible-header{% if page.nfc_tag %} active{% endif %}">NFC Tags<i class="mdi-navigation-arrow-drop-down"></i></a>
+          <div class="collapsible-body">
+            <ul>
+              {% assign tags = site.nfc_tags | sort: 'title' %}
+              {% for item in tags %}
+                <li{% if page.url == item.url %} class="active"{% endif %}><a href="{{ item.url }}">{{ item.title }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+        <li>
+          <a class="collapsible-header{% if page.rfid_tag %} active{% endif %}">RFID Tags<i class="mdi-navigation-arrow-drop-down"></i></a>
+          <div class="collapsible-body">
+            <ul>
+              {% assign tags = site.rfid_tags | sort: 'title' %}
+              {% for item in tags %}
+                <li{% if page.url == item.url %} class="active"{% endif %}><a href="{{ item.url }}">{{ item.title }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+        <li>
+          <a class="collapsible-header{% if page.standard %} active{% endif %}">Standards<i class="mdi-navigation-arrow-drop-down"></i></a>
+          <div class="collapsible-body">
+            <ul>
+              {% assign standards = site.standards | sort: 'title' %}
+              {% for item in standards %}
+                <li{% if page.url == item.url %} class="active"{% endif %}><a href="{{ item.url }}">{{ item.title }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>

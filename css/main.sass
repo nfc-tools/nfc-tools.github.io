@@ -1,0 +1,129 @@
+---
+---
+// Mixins
+@import "components/prefixer"
+@import "components/mixins"
+@import "components/color"
+
+// Variables;
+@import "components/variables"
+
+$color1: #122868
+$color2: #092327
+$color3: #00a9a5
+$color4: #4e8098
+$color5: #90c2e7
+
+$main: "blue"
+$primary-color: $color1
+
+// Reset
+@import "components/normalize"
+
+// components
+@import "components/global"
+@import "components/icons-material-design"
+@import "components/grid"
+@import "components/navbar"
+@import "components/roboto"
+@import "components/typography"
+@import "components/cards"
+// @import "components/toast"
+// @import "components/tabs"
+// @import "components/tooltip"
+@import "components/buttons"
+// @import "components/dropdown"
+// @import "components/waves"
+// @import "components/modal"
+@import "components/collapsible"
+@import "components/materialbox"
+// @import "components/form"
+// @import "components/table_of_contents"
+@import "components/sideNav"
+// @import "components/preloader"
+// @import "components/slider"
+// @import "components/date_picker/default.scss"
+// @import "components/date_picker/default.date.scss"
+// @import "components/date_picker/default.time.scss"
+
+html
+  background-color: $color2
+body
+  background-color: #fff
+
+a
+  color: $color3
+
+.side-nav.fixed
+  overflow: hidden
+  &:hover
+    overflow: auto
+  .logo
+    background-color: inherit
+    margin: 1rem 0
+  a, .collapsible-header
+    line-height: 3rem
+    height: 3rem
+
+.btn
+  background-color: $color1
+  text-transform: none
+  &:hover
+    background-color: $color4
+  
+.card
+  background-color: $color5
+  color: #fff
+  .card-action a
+    color: $color1
+  &.white
+    background-color: #fff
+    color: #000
+  h3
+    margin: 0
+
+.large
+  font-size: 1.2rem
+
+h1.page-title
+  margin: 0 0 20px 0
+  padding: 2.1rem 0px 1.68rem
+  background-color: $color4
+  color: #fff
+  @extend .z-depth-1
+  a.edit
+    @extend .white-text
+    @extend .right
+    font-size: 2rem
+
+img.logo
+  height: 1em
+  width: auto
+  vertical-align: sub
+h1
+  color: $primary-color
+h2
+  color: $primary-color
+  font-size: 2rem
+  margin: 1rem 0
+h3
+  font-size: 1.5rem
+  margin: 1rem 0
+  color: $color3
+
+.material-placeholder
+  display: inline-block
+
+p code
+  color: #000
+  background-color: #ddf
+  border-radius: 5px
+  padding: 0 .5ex
+
+footer.page-footer
+  background-color: $primary-color
+  color: #fff
+  a
+    color: $color5
+  .footer-copyright
+    background-color: $color2

@@ -17,7 +17,7 @@ Before openning a new issue, please ensure that a similar problem has not alread
 
 *Minimal Failing Example* (MFE) are sometimes referring to as *Minimal Working Example* (MWE), however, since your code is supposed to break, we prefer to name them *failing*…
 
-A MFE should be complete `.c` file with all `#include`s and a `main()` function that makes the problem evident. It will help us greatly to reproduce it quickly in order to diagnose and fix the problems you report or to spot a misuse..
+A MFE should be complete a `.c` file with all `#include`s and a `main()` function that makes the problem evident. It will help us greatly to reproduce it quickly in order to diagnose and fix the problems you report or to spot a misuse..
 
 ## Providing a failing test case
 

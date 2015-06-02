@@ -50,7 +50,7 @@ examples/.libs/mifare-desfire-info:
 	libthr.so.3 => /lib/libthr.so.3 (0x801898000)
 ~~~
 
-For this reason, running a program in the debugger **MUST** be done this way:
+For this reason, the easier way of running a program in the debugger from the build directory is to do it this way:
 
 ~~~
 ./libtool --mode=execute gdb examples/mifare-desfire-info

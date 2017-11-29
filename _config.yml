@@ -80,7 +80,7 @@ defaults:
       layout: page
 
 # Github defaults (overridable)
-highlighter: pygments
+highlighter: rouge
 # Github defaults (not overridable)
 safe: true
 lsi: false
